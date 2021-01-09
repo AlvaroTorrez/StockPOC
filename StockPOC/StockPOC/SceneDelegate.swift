@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  StockPOC
 //
-//  Created by William Alvarez on 12/23/20.
+//  Created by Alvaro Torrez on 12/23/20.
 //  Copyright © 2020 alvaro.torrez. All rights reserved.
 //
 
@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
+        SetupDI.initializer()
+        let contentView = MainView()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

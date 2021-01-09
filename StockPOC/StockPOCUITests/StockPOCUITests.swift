@@ -2,7 +2,7 @@
 //  StockPOCUITests.swift
 //  StockPOCUITests
 //
-//  Created by William Alvarez on 12/23/20.
+//  Created by Alvaro Torrez on 12/23/20.
 //  Copyright © 2020 alvaro.torrez. All rights reserved.
 //
 
