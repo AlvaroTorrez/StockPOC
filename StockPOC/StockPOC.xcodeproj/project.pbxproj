@@ -10,6 +10,8 @@
 		6E032D8225A6A81D009D57E9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E032D8125A6A81D009D57E9 /* MainView.swift */; };
 		6E41508B25A925EA000E8260 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E41508A25A925EA000E8260 /* BaseViewModel.swift */; };
 		6E41508D25A95504000E8260 /* RequestApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E41508C25A95504000E8260 /* RequestApiHelper.swift */; };
+		6E44A4D725AA64E20004C5E8 /* SearchSYMResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44A4D625AA64E20004C5E8 /* SearchSYMResult.swift */; };
+		6E44A4D925AA65230004C5E8 /* ItemFromSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44A4D825AA65230004C5E8 /* ItemFromSearch.swift */; };
 		6EAFEE6225A7934F00B34000 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFEE6125A7934F00B34000 /* MainViewModel.swift */; };
 		6EAFEE6525A7C15E00B34000 /* NotificationsName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFEE6425A7C15E00B34000 /* NotificationsName.swift */; };
 		6EAFEE6725A7EA6600B34000 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFEE6625A7EA6600B34000 /* DI.swift */; };
@@ -25,6 +27,12 @@
 		6EB1F34F2594028D00D23290 /* StockPOCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB1F34E2594028D00D23290 /* StockPOCTests.swift */; };
 		6EB1F35A2594028D00D23290 /* StockPOCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB1F3592594028D00D23290 /* StockPOCUITests.swift */; };
 		6ED20A7A25AA4A1C00853538 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED20A7925AA4A1C00853538 /* KeyboardHandler.swift */; };
+		6EF5A32825AB7C9200D67E00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5A32725AB7C9200D67E00 /* Constants.swift */; };
+		6EF5A32A25AB7D3A00D67E00 /* StockServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5A32925AB7D3A00D67E00 /* StockServiceProtocol.swift */; };
+		6EF5A32C25AB7D4E00D67E00 /* StockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5A32B25AB7D4E00D67E00 /* StockService.swift */; };
+		6EF5A32E25AB80D800D67E00 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5A32D25AB80D800D67E00 /* EndPoints.swift */; };
+		6EF5A33025AB830900D67E00 /* SearchSYMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5A32F25AB830900D67E00 /* SearchSYMView.swift */; };
+		6EF5A33225AB832A00D67E00 /* SearchSYMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5A33125AB832A00D67E00 /* SearchSYMViewModel.swift */; };
 		6EFEBBFD25A667990087D911 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFEBBFC25A667990087D911 /* LoginView.swift */; };
 		6EFEBBFF25A6687D0087D911 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFEBBFE25A6687D0087D911 /* LoginViewModel.swift */; };
 		6EFEBC0125A680440087D911 /* MyStockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFEBC0025A680440087D911 /* MyStockView.swift */; };
@@ -51,6 +59,8 @@
 		6E032D8125A6A81D009D57E9 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		6E41508A25A925EA000E8260 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		6E41508C25A95504000E8260 /* RequestApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestApiHelper.swift; sourceTree = "<group>"; };
+		6E44A4D625AA64E20004C5E8 /* SearchSYMResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSYMResult.swift; sourceTree = "<group>"; };
+		6E44A4D825AA65230004C5E8 /* ItemFromSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFromSearch.swift; sourceTree = "<group>"; };
 		6EAFEE6125A7934F00B34000 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		6EAFEE6425A7C15E00B34000 /* NotificationsName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsName.swift; sourceTree = "<group>"; };
 		6EAFEE6625A7EA6600B34000 /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
@@ -72,6 +82,12 @@
 		6EB1F3592594028D00D23290 /* StockPOCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPOCUITests.swift; sourceTree = "<group>"; };
 		6EB1F35B2594028D00D23290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6ED20A7925AA4A1C00853538 /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
+		6EF5A32725AB7C9200D67E00 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6EF5A32925AB7D3A00D67E00 /* StockServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockServiceProtocol.swift; sourceTree = "<group>"; };
+		6EF5A32B25AB7D4E00D67E00 /* StockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockService.swift; sourceTree = "<group>"; };
+		6EF5A32D25AB80D800D67E00 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		6EF5A32F25AB830900D67E00 /* SearchSYMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSYMView.swift; sourceTree = "<group>"; };
+		6EF5A33125AB832A00D67E00 /* SearchSYMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSYMViewModel.swift; sourceTree = "<group>"; };
 		6EFEBBFC25A667990087D911 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6EFEBBFE25A6687D0087D911 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		6EFEBC0025A680440087D911 /* MyStockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStockView.swift; sourceTree = "<group>"; };
@@ -116,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				6EAFEE6D25A7ECAB00B34000 /* SetupDI.swift */,
+				6EF5A32725AB7C9200D67E00 /* Constants.swift */,
+				6EF5A32D25AB80D800D67E00 /* EndPoints.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -209,6 +227,7 @@
 				6EFEBBFC25A667990087D911 /* LoginView.swift */,
 				6EFEBC0025A680440087D911 /* MyStockView.swift */,
 				6E032D8125A6A81D009D57E9 /* MainView.swift */,
+				6EF5A32F25AB830900D67E00 /* SearchSYMView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,6 +238,7 @@
 				6EFEBBFE25A6687D0087D911 /* LoginViewModel.swift */,
 				6EAFEE6125A7934F00B34000 /* MainViewModel.swift */,
 				6E41508A25A925EA000E8260 /* BaseViewModel.swift */,
+				6EF5A33125AB832A00D67E00 /* SearchSYMViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -226,6 +246,8 @@
 		6EFEBBFA25A667520087D911 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6E44A4D625AA64E20004C5E8 /* SearchSYMResult.swift */,
+				6E44A4D825AA65230004C5E8 /* ItemFromSearch.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,6 +257,8 @@
 			children = (
 				6EAFEE6825A7EB9800B34000 /* AuthServiceProtocol.swift */,
 				6EAFEE6A25A7EBC500B34000 /* AuthService.swift */,
+				6EF5A32925AB7D3A00D67E00 /* StockServiceProtocol.swift */,
+				6EF5A32B25AB7D4E00D67E00 /* StockService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -370,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EF5A33025AB830900D67E00 /* SearchSYMView.swift in Sources */,
 				6EAFEE6225A7934F00B34000 /* MainViewModel.swift in Sources */,
 				6ED20A7A25AA4A1C00853538 /* KeyboardHandler.swift in Sources */,
 				6E41508D25A95504000E8260 /* RequestApiHelper.swift in Sources */,
@@ -378,10 +403,17 @@
 				6E41508B25A925EA000E8260 /* BaseViewModel.swift in Sources */,
 				6EAFEE6925A7EB9800B34000 /* AuthServiceProtocol.swift in Sources */,
 				6E032D8225A6A81D009D57E9 /* MainView.swift in Sources */,
+				6EF5A32A25AB7D3A00D67E00 /* StockServiceProtocol.swift in Sources */,
 				6EAFEE6B25A7EBC500B34000 /* AuthService.swift in Sources */,
+				6E44A4D725AA64E20004C5E8 /* SearchSYMResult.swift in Sources */,
+				6EF5A32C25AB7D4E00D67E00 /* StockService.swift in Sources */,
 				6EB1F33A2594028B00D23290 /* SceneDelegate.swift in Sources */,
+				6EF5A33225AB832A00D67E00 /* SearchSYMViewModel.swift in Sources */,
 				6EFEBBFD25A667990087D911 /* LoginView.swift in Sources */,
 				6EAFEE6525A7C15E00B34000 /* NotificationsName.swift in Sources */,
+				6E44A4D925AA65230004C5E8 /* ItemFromSearch.swift in Sources */,
+				6EF5A32E25AB80D800D67E00 /* EndPoints.swift in Sources */,
+				6EF5A32825AB7C9200D67E00 /* Constants.swift in Sources */,
 				6EFEBBFF25A6687D0087D911 /* LoginViewModel.swift in Sources */,
 				6EAFEE6E25A7ECAB00B34000 /* SetupDI.swift in Sources */,
 				6EAFEE7125A803CE00B34000 /* LoadingView.swift in Sources */,

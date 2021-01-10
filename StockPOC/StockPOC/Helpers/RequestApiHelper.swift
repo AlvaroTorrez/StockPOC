@@ -19,9 +19,18 @@ enum RequestMethods: String {
 
 final class RequestApiHelper {
     
-    static func test() {
-        request(from: "https://jsonplaceholder.typicode.com/posts") { result in
+    static func getRequest<T>(urlString: String, parameters: [String:String]? = nil, headers: [String:String]? = nil, completion: @escaping (T) -> Void) where T: Codable {
+        request(from: urlString, parameters: parameters, headers: headers) { result in
             print(result)
+             switch result {
+               case .success(let jsonString):
+                   let decoder = JSONDecoder()
+                   if let jsonSearchSYMResult = try? decoder.decode(T.self, from: jsonString.data(using: .utf8)!) {
+                    completion(jsonSearchSYMResult)
+                   }
+               case .failure(let error):
+                   print(error)
+               }
         }
     }
     
@@ -29,12 +38,12 @@ final class RequestApiHelper {
         var parametesOneString = [String]()
         if (parameters != nil && !parameters!.isEmpty) {
             parameters!.keys.forEach { (key) in
-                parametesOneString.append("\(key)=\(String(describing: parameters![key]))")
+                parametesOneString.append("\(key)=\(parameters?[key] ?? "")")
             }
         }
         var fullUrl = urlString
         if !parametesOneString.isEmpty {
-            fullUrl = fullUrl + parametesOneString.joined(separator: "&")
+            fullUrl = fullUrl + "?" + parametesOneString.joined(separator: "&")
         }
         
         guard let url = URL(string: fullUrl) else {

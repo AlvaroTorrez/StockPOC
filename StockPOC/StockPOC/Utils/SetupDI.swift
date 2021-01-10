@@ -11,5 +11,6 @@ import Foundation
 final class SetupDI {
     static func initializer() {
         DI.shared.register(type: AuthServiceProtocol.self, component: AuthService())
+        DI.shared.register(type: StockServiceProtocol.self, component: StockService())
     }
 }

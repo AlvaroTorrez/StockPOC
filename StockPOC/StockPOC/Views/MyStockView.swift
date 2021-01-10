@@ -10,10 +10,7 @@ import SwiftUI
 
 struct MyStockView: View {
     var body: some View {
-        NavigationView {
-            Text("My Stock view")
-            .navigationBarTitle("My Stocks")
-        }
+        SearchSYMView()
     }
 }
 
