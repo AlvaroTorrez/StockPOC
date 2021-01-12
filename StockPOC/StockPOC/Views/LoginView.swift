@@ -37,6 +37,10 @@ struct LoginView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.horizontal, 50)
                         .padding(.vertical, 10)
+                    if self.viewModel.showError {
+                        Text("Wrong Password or Username")
+                            .foregroundColor(.red)
+                    }
                     Button(action: {
                         self.viewModel.performAuthUser()
                         self.hideKeyboard()

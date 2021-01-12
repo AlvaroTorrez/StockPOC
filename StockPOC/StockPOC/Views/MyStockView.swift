@@ -7,10 +7,28 @@
 //
 
 import SwiftUI
+import FASwiftUI
 
 struct MyStockView: View {
+    @ObservedObject var viewModel = MyStockViewModel()
     var body: some View {
-        SearchSYMView()
+        LoadingView(isShowing: viewModel.isLoading) {
+            NavigationView {
+                ZStack {
+                    VStack (alignment: .leading) {
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            NavigationLink(destination: SearchSYMView()) {
+                                FAText(iconName: "plus", size: 50)
+                                    .padding(20)
+                            }.navigationBarTitle("Navigation")
+                        }
+                    }
+                }
+                .navigationBarTitle("My Stocks")
+            }
+        }
     }
 }
 

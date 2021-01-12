@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6E032D8225A6A81D009D57E9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E032D8125A6A81D009D57E9 /* MainView.swift */; };
+		6E084C9625ACD1E600BFBE0E /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E084C9225ACD1E600BFBE0E /* Font Awesome 5 Free-Solid-900.otf */; };
+		6E084C9725ACD1E600BFBE0E /* icons.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E084C9325ACD1E600BFBE0E /* icons.json */; };
+		6E084C9825ACD1E600BFBE0E /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E084C9425ACD1E600BFBE0E /* Font Awesome 5 Brands-Regular-400.otf */; };
+		6E084C9925ACD1E600BFBE0E /* Font Awesome 5 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E084C9525ACD1E600BFBE0E /* Font Awesome 5 Free-Regular-400.otf */; };
 		6E41508B25A925EA000E8260 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E41508A25A925EA000E8260 /* BaseViewModel.swift */; };
 		6E41508D25A95504000E8260 /* RequestApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E41508C25A95504000E8260 /* RequestApiHelper.swift */; };
 		6E44A4D725AA64E20004C5E8 /* SearchSYMResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44A4D625AA64E20004C5E8 /* SearchSYMResult.swift */; };
@@ -27,6 +31,8 @@
 		6EB1F34F2594028D00D23290 /* StockPOCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB1F34E2594028D00D23290 /* StockPOCTests.swift */; };
 		6EB1F35A2594028D00D23290 /* StockPOCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB1F3592594028D00D23290 /* StockPOCUITests.swift */; };
 		6ED20A7A25AA4A1C00853538 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED20A7925AA4A1C00853538 /* KeyboardHandler.swift */; };
+		6ED22D7A25ACCD840044A80F /* FASwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6ED22D7925ACCD840044A80F /* FASwiftUI */; };
+		6ED22D7C25ACCDEC0044A80F /* MyStockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED22D7B25ACCDEC0044A80F /* MyStockViewModel.swift */; };
 		6EF5A32825AB7C9200D67E00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5A32725AB7C9200D67E00 /* Constants.swift */; };
 		6EF5A32A25AB7D3A00D67E00 /* StockServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5A32925AB7D3A00D67E00 /* StockServiceProtocol.swift */; };
 		6EF5A32C25AB7D4E00D67E00 /* StockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5A32B25AB7D4E00D67E00 /* StockService.swift */; };
@@ -57,6 +63,10 @@
 
 /* Begin PBXFileReference section */
 		6E032D8125A6A81D009D57E9 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		6E084C9225ACD1E600BFBE0E /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
+		6E084C9325ACD1E600BFBE0E /* icons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icons.json; sourceTree = "<group>"; };
+		6E084C9425ACD1E600BFBE0E /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
+		6E084C9525ACD1E600BFBE0E /* Font Awesome 5 Free-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Regular-400.otf"; sourceTree = "<group>"; };
 		6E41508A25A925EA000E8260 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		6E41508C25A95504000E8260 /* RequestApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestApiHelper.swift; sourceTree = "<group>"; };
 		6E44A4D625AA64E20004C5E8 /* SearchSYMResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSYMResult.swift; sourceTree = "<group>"; };
@@ -82,6 +92,7 @@
 		6EB1F3592594028D00D23290 /* StockPOCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPOCUITests.swift; sourceTree = "<group>"; };
 		6EB1F35B2594028D00D23290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6ED20A7925AA4A1C00853538 /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
+		6ED22D7B25ACCDEC0044A80F /* MyStockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStockViewModel.swift; sourceTree = "<group>"; };
 		6EF5A32725AB7C9200D67E00 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6EF5A32925AB7D3A00D67E00 /* StockServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockServiceProtocol.swift; sourceTree = "<group>"; };
 		6EF5A32B25AB7D4E00D67E00 /* StockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockService.swift; sourceTree = "<group>"; };
@@ -98,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ED22D7A25ACCD840044A80F /* FASwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +181,7 @@
 		6EB1F3362594028B00D23290 /* StockPOC */ = {
 			isa = PBXGroup;
 			children = (
+				6ED22D7D25ACD12E0044A80F /* Resources */,
 				6ED20A7825AA49D100853538 /* Extensions */,
 				6EAFEE6C25A7EC6600B34000 /* Utils */,
 				6EAFEE6325A7C11C00B34000 /* Helpers */,
@@ -220,6 +233,25 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		6ED22D7D25ACD12E0044A80F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6ED22D7E25ACD1390044A80F /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6ED22D7E25ACD1390044A80F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6E084C9425ACD1E600BFBE0E /* Font Awesome 5 Brands-Regular-400.otf */,
+				6E084C9525ACD1E600BFBE0E /* Font Awesome 5 Free-Regular-400.otf */,
+				6E084C9225ACD1E600BFBE0E /* Font Awesome 5 Free-Solid-900.otf */,
+				6E084C9325ACD1E600BFBE0E /* icons.json */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		6EFEBBF825A6672F0087D911 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +271,7 @@
 				6EAFEE6125A7934F00B34000 /* MainViewModel.swift */,
 				6E41508A25A925EA000E8260 /* BaseViewModel.swift */,
 				6EF5A33125AB832A00D67E00 /* SearchSYMViewModel.swift */,
+				6ED22D7B25ACCDEC0044A80F /* MyStockViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -279,6 +312,9 @@
 			dependencies = (
 			);
 			name = StockPOC;
+			packageProductDependencies = (
+				6ED22D7925ACCD840044A80F /* FASwiftUI */,
+			);
 			productName = StockPOC;
 			productReference = 6EB1F3342594028B00D23290 /* StockPOC.app */;
 			productType = "com.apple.product-type.application";
@@ -351,6 +387,9 @@
 				Base,
 			);
 			mainGroup = 6EB1F32B2594028B00D23290;
+			packageReferences = (
+				6ED22D7825ACCD840044A80F /* XCRemoteSwiftPackageReference "FASwiftUI" */,
+			);
 			productRefGroup = 6EB1F3352594028B00D23290 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -368,8 +407,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EB1F3442594028D00D23290 /* LaunchScreen.storyboard in Resources */,
+				6E084C9825ACD1E600BFBE0E /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
+				6E084C9925ACD1E600BFBE0E /* Font Awesome 5 Free-Regular-400.otf in Resources */,
 				6EB1F3412594028D00D23290 /* Preview Assets.xcassets in Resources */,
 				6EB1F33E2594028D00D23290 /* Assets.xcassets in Resources */,
+				6E084C9625ACD1E600BFBE0E /* Font Awesome 5 Free-Solid-900.otf in Resources */,
+				6E084C9725ACD1E600BFBE0E /* icons.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +444,7 @@
 				6EB1F3382594028B00D23290 /* AppDelegate.swift in Sources */,
 				6EAFEE6725A7EA6600B34000 /* DI.swift in Sources */,
 				6E41508B25A925EA000E8260 /* BaseViewModel.swift in Sources */,
+				6ED22D7C25ACCDEC0044A80F /* MyStockViewModel.swift in Sources */,
 				6EAFEE6925A7EB9800B34000 /* AuthServiceProtocol.swift in Sources */,
 				6E032D8225A6A81D009D57E9 /* MainView.swift in Sources */,
 				6EF5A32A25AB7D3A00D67E00 /* StockServiceProtocol.swift in Sources */,
@@ -736,6 +780,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6ED22D7825ACCD840044A80F /* XCRemoteSwiftPackageReference "FASwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mattmaddux/FASwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6ED22D7925ACCD840044A80F /* FASwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6ED22D7825ACCD840044A80F /* XCRemoteSwiftPackageReference "FASwiftUI" */;
+			productName = FASwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6EB1F32C2594028B00D23290 /* Project object */;
 }

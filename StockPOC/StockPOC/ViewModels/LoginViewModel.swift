@@ -15,6 +15,7 @@ final class LoginViewModel : BaseViewModel {
     @Published var password = ""
     
     @Published var isLoggedIn = false
+    @Published var showError = false
     
     init(authService: AuthServiceProtocol = DI.shared.resolve(type: AuthServiceProtocol.self)!) {
         self.authService = authService
@@ -26,8 +27,11 @@ final class LoginViewModel : BaseViewModel {
         authService.authUser(username: username, password: password) { (status) in
             self.isLoading = false
             if status == .SUCCESS {
+                self.showError = false
                 let globalNotificationCenter = NotificationCenter.default
                 globalNotificationCenter.post(name: Notification.Name(NotificationsName.LoginMessage.rawValue), object: nil)
+            } else {
+                self.showError = true
             }
         }
     }
