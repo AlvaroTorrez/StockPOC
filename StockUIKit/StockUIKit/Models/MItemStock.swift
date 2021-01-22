@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ItemFromSearch: Codable {
+struct MItemStock: Codable {
     var symbol: String
     var name: String
     var currency: String
@@ -18,4 +18,11 @@ struct ItemFromSearch: Codable {
         case name = "2. name"
         case currency = "8. currency"
     }
+}
+
+struct VItemStock: Identifiable {
+    var id = UUID()
+    
+    var name: String
+    var sym: String
 }

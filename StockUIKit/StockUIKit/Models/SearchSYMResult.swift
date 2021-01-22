@@ -8,5 +8,5 @@
 import Foundation
 
 struct SearchSYMResult: Codable {
-    var bestMatches: [ItemFromSearch]
+    var bestMatches: [MItemStock]
 }

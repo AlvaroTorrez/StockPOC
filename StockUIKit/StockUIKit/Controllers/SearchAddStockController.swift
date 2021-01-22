@@ -2,7 +2,7 @@
 //  SearchAddStockController.swift
 //  StockUIKit
 //
-//  Created by William Alvarez on 1/13/21.
+//  Created by Alvaro Torrez on 1/13/21.
 //  Copyright © 2021 alvaro.torrez. All rights reserved.
 //
 
@@ -14,7 +14,9 @@ class SearchAddStockController: UIViewController {
     
     @IBOutlet weak var searchField: UITextField!
     
-    var list: [ItemStockSearch] = []
+    @IBOutlet weak var cancelButton: UIButton!
+    
+    var list: [VItemStock] = []
     
     var stockService: StockServiceProtocol?
     
@@ -30,20 +32,48 @@ class SearchAddStockController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func searchButtonTapped(_ sender: Any) {
+    
+    @IBAction func OnEditingSearch(_ sender: UITextField) {
+        
+        guard let text = sender.text, !text.isEmpty else {
+            CancelSearch()
+            return
+        }
+        
+        cancelButton.isHidden = false
         stockService?.searchStockSYM(searchTerm: searchField.text!, completion: { (result) in
-            if result.bestMatches.count > 0 {
-                let resultSearch = result.bestMatches.map { (itemResult) -> ItemStockSearch in
-                    ItemStockSearch(name: itemResult.name)
+            if !result.bestMatches.isEmpty {
+                let resultSearch = result.bestMatches.map { (itemResult) -> VItemStock in
+                    VItemStock(name: itemResult.name, sym: itemResult.symbol)
                 }
-                self.list = resultSearch                
+                self.list = resultSearch
                 DispatchQueue.main.async {
                     self.mainListSearch.reloadData()
                 }
             }
         })
     }
+
+    @IBAction func OnCancelSearc(_ sender: UIButton) {
+        CancelSearch()
+    }
     
+    func CancelSearch() {
+        searchField.text = ""
+        cancelButton.isHidden = true
+        self.list = [VItemStock]()
+        DispatchQueue.main.async {
+            self.mainListSearch.reloadData()
+        }
+    }
+    
+    @IBAction func OnAddStock(_ sender: Any) {
+        guard let index = mainListSearch?.indexPathForSelectedRow?.row else {
+            return
+        }
+        let item = list[index]
+        stockService?.saveMyStock(item: MItemStock(symbol: item.sym, name: item.name, currency: ""))
+    }
 }
 
 extension SearchAddStockController: UITableViewDataSource, UITableViewDelegate {
@@ -54,14 +84,22 @@ extension SearchAddStockController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = list[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemStockSearch") as! StockSearchedViewCellController
-        
         cell.setItem(item: item)
+        cell.backgroundColor = indexPath.row % 2 == 0 ? #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1) : UIColor.white
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? StockSearchedViewCellController {
+            cell.isSelectedCell = true
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? StockSearchedViewCellController {
+            cell.isSelectedCell = false
+        }
     }
 }
 
-struct ItemStockSearch: Identifiable {
-    var id = UUID()
-    
-    var name: String
-}
+

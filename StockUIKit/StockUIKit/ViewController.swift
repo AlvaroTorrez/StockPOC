@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  StockUIKit
 //
-//  Created by William Alvarez on 1/11/21.
+//  Created by Alvaro Torrez on 1/11/21.
 //  Copyright © 2021 alvaro.torrez. All rights reserved.
 //
 
@@ -18,6 +18,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var loadingView: UIVisualEffectView!
     
+    var test: String {
+        get {
+            "test"
+        }
+    }
+    
+    var test2: String = "test2"
     
     var authService: AuthServiceProtocol? 
     

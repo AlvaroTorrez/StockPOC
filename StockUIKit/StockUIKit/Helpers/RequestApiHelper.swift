@@ -28,6 +28,7 @@ final class RequestApiHelper {
                     completion(jsonSearchSYMResult)
                    }
                case .failure(let error):
+                   //completion()
                    print(error)
                }
         }

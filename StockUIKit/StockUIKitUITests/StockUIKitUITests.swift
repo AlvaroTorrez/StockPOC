@@ -2,7 +2,7 @@
 //  StockUIKitUITests.swift
 //  StockUIKitUITests
 //
-//  Created by William Alvarez on 1/11/21.
+//  Created by Alvaro Torrez on 1/11/21.
 //  Copyright © 2021 alvaro.torrez. All rights reserved.
 //
 

@@ -11,4 +11,8 @@ import Foundation
 protocol StockServiceProtocol {
     
     func searchStockSYM(searchTerm: String, completion: @escaping (SearchSYMResult) -> Void)
+    
+    func getMyStocks() -> [MItemStock]
+    
+    func saveMyStock(item: MItemStock) -> Void
 }
