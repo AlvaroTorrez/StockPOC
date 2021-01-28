@@ -15,7 +15,7 @@ class AuthService: AuthServiceProtocol {
     }
     
     func authUser(username: String, password: String, completion: @escaping (AuthStatus) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             if (username == "Test" && password == "123") {
                 completion(.SUCCESS)
             } else {

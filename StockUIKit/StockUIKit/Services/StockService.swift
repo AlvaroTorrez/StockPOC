@@ -9,19 +9,12 @@ import Foundation
 
 final class StockService: StockServiceProtocol {
     
+    
+    
     let userDefaults: UserDefaults
     
     init(userDefaults: UserDefaults = .standard) {
         self.userDefaults = userDefaults
-        var temp = [MItemStock]()
-        temp.append(MItemStock(symbol: "IBM", name: "IBM Name", currency: "$us"))
-        temp.append(MItemStock(symbol: "APPLE", name: "APPLE Name", currency: "$us"))
-
-
-        if let data = try? PropertyListEncoder().encode(temp) {
-            self.userDefaults.set(data, forKey: "MyStocks")
-        }
-        
     }
     
     func searchStockSYM(searchTerm: String, completion: @escaping (SearchSYMResult) -> Void) {
@@ -42,6 +35,21 @@ final class StockService: StockServiceProtocol {
     }
     
     func saveMyStock(item: MItemStock) {
+        
+        var myStock = getMyStocks()
+        myStock.append(item)
+        if let data = try? PropertyListEncoder().encode(myStock) {
+            self.userDefaults.set(data, forKey: "MyStocks")
+        }
         return
+    }
+    
+    func removeStockBySym(sym: String) {
+        let myStock = getMyStocks().filter { (item) -> Bool in
+            item.symbol != sym
+        }
+        if let data = try? PropertyListEncoder().encode(myStock) {
+            self.userDefaults.set(data, forKey: "MyStocks")
+        }
     }
 }

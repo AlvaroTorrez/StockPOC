@@ -6,6 +6,7 @@ target 'StockUIKit' do
   use_frameworks!
   # Pods for StockUIKit
   pod 'LBTATools'
+  pod 'Charts'
 
   target 'StockUIKitTests' do
     inherit! :search_paths

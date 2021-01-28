@@ -33,6 +33,8 @@
 		6E488E8325AF80C90081F714 /* SearchAddStockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E488E8225AF80C90081F714 /* SearchAddStockController.swift */; };
 		6E488E8625AF857C0081F714 /* StockSearchedViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E488E8525AF857C0081F714 /* StockSearchedViewCellController.swift */; };
 		6E68313E25B63E35005416BE /* MyStockViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E68313D25B63E35005416BE /* MyStockViewCellController.swift */; };
+		6E8BD59F25C06DB200D068DD /* StockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8BD59D25C06DB200D068DD /* StockDetailViewController.swift */; };
+		6E8BD5A025C06DB200D068DD /* StockDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E8BD59E25C06DB200D068DD /* StockDetailViewController.xib */; };
 		6EEBFF3925B61AF8003722C4 /* MyStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEBFF3825B61AF8003722C4 /* MyStockViewController.swift */; };
 		A2AF301BE6CD4950B06EB8EE /* Pods_StockUIKit_StockUIKitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3367590895AC67569CCBF2CF /* Pods_StockUIKit_StockUIKitUITests.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +93,8 @@
 		6E488E8525AF857C0081F714 /* StockSearchedViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSearchedViewCellController.swift; sourceTree = "<group>"; };
 		6E5B1CDF092BC41F4A5E0AE3 /* Pods-StockUIKit-StockUIKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockUIKit-StockUIKitUITests.debug.xcconfig"; path = "Target Support Files/Pods-StockUIKit-StockUIKitUITests/Pods-StockUIKit-StockUIKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E68313D25B63E35005416BE /* MyStockViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStockViewCellController.swift; sourceTree = "<group>"; };
+		6E8BD59D25C06DB200D068DD /* StockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailViewController.swift; sourceTree = "<group>"; };
+		6E8BD59E25C06DB200D068DD /* StockDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockDetailViewController.xib; sourceTree = "<group>"; };
 		6EEBFF3825B61AF8003722C4 /* MyStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStockViewController.swift; sourceTree = "<group>"; };
 		D2F0D31AB98A168EB756D77F /* Pods_StockUIKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockUIKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19588EE385566AB66B61A6F /* Pods_StockUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +254,7 @@
 				6E2F39EC25AD201000406D75 /* ViewController.swift */,
 				6E488E8225AF80C90081F714 /* SearchAddStockController.swift */,
 				6EEBFF3825B61AF8003722C4 /* MyStockViewController.swift */,
+				6E8BD59D25C06DB200D068DD /* StockDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 		6E7358FF25AE885600229266 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6E8BD59E25C06DB200D068DD /* StockDetailViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -392,6 +398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E8BD5A025C06DB200D068DD /* StockDetailViewController.xib in Resources */,
 				6E2F39F525AD201200406D75 /* LaunchScreen.storyboard in Resources */,
 				6E2F39F225AD201200406D75 /* Assets.xcassets in Resources */,
 				6E2F39F025AD201000406D75 /* Main.storyboard in Resources */,
@@ -531,6 +538,7 @@
 				6E289D3E25AE86010005F7CE /* AuthServiceProtocol.swift in Sources */,
 				6E488E8625AF857C0081F714 /* StockSearchedViewCellController.swift in Sources */,
 				6E289D4225AE860B0005F7CE /* DI.swift in Sources */,
+				6E8BD59F25C06DB200D068DD /* StockDetailViewController.swift in Sources */,
 				6E289D4625AE86130005F7CE /* KeyboardHandler.swift in Sources */,
 				6E289D3D25AE86010005F7CE /* StockServiceProtocol.swift in Sources */,
 				6E289D4925AE869E0005F7CE /* MItemStock.swift in Sources */,

@@ -13,7 +13,8 @@ class MyStockViewController: UIViewController {
     var stockService: StockServiceProtocol?
     
     var myStockList: [VItemStock] = []
-
+    @IBOutlet weak var myStockTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,11 +24,16 @@ class MyStockViewController: UIViewController {
         }
         
         self.stockService = stockService
-
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        reloadMyStocksData()
+        myStockTableView.reloadData()
+    }
+    
+    func reloadMyStocksData() {
         let myStocks: [MItemStock] = stockService?.getMyStocks() ?? []
         
         myStockList = myStocks.map { (item) -> VItemStock in
@@ -37,9 +43,26 @@ class MyStockViewController: UIViewController {
 }
 
 extension MyStockViewController: UITableViewDelegate, UITableViewDataSource, MyStockCellDeleate {
+    func removeCell(sym: String) {
+        let alert = UIAlertController(title: "Confirmation", message: "Are you sure to remove this stock", preferredStyle: UIAlertController.Style.alert)
+        
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default){ (action) in
+            self.stockService?.removeStockBySym(sym: sym)
+            self.reloadMyStocksData()
+            DispatchQueue.main.async {
+                self.myStockTableView.reloadData()
+            }
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func selectedCell(sym: String) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "StockDetail")
+        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //let vc = storyboard.instantiateViewController(withIdentifier: "StockDetail")
+        let vc = StockDetailViewController(nibName: "StockDetailViewController", bundle: nil)
         vc.title = sym
         navigationController?.pushViewController(vc, animated: true)
     }

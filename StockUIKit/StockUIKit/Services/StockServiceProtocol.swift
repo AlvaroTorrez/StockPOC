@@ -15,4 +15,6 @@ protocol StockServiceProtocol {
     func getMyStocks() -> [MItemStock]
     
     func saveMyStock(item: MItemStock) -> Void
+    
+    func removeStockBySym(sym: String) -> Void
 }

@@ -33,12 +33,16 @@ class MyStockViewCellController: UITableViewCell {
         symItemLabel.text = item.sym
         itemNameLabel.text = item.name
     }
-
+    
     @IBAction func OnRemoveItem(_ sender: Any) {
+        if let delegate = selectedDelegate {
+            delegate.removeCell(sym: symItemLabel.text ?? "")
+        }
     }
 }
 
 protocol MyStockCellDeleate {
     func selectedCell(sym: String)
+    func removeCell(sym: String)
 }
 

@@ -54,6 +54,10 @@ class SearchAddStockController: UIViewController {
         })
     }
 
+    @IBAction func onCancelAddStock(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func OnCancelSearc(_ sender: UIButton) {
         CancelSearch()
     }
@@ -90,15 +94,17 @@ extension SearchAddStockController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) as? StockSearchedViewCellController {
-            cell.isSelectedCell = true
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) as? StockSearchedViewCellController {
-            cell.isSelectedCell = false
-        }
+        let alert = UIAlertController(title: "Confirmation", message: "Are you sure to add this stock in your My Stocks", preferredStyle: UIAlertController.Style.alert)
+
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default){ (action) in
+            let item = self.list[indexPath.row]
+            self.stockService?.saveMyStock(item: MItemStock(symbol: item.sym, name: item.name, currency: ""))
+            self.dismiss(animated: true, completion: nil)
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
